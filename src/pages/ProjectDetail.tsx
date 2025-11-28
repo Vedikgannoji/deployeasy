@@ -59,7 +59,7 @@ export default function ProjectDetail() {
     name: "portfolio-site",
     framework: "React",
     status: "live",
-    url: "portfolio-site.deployeasy.app",
+    url: "portfolio-site.oneship.app",
     lastDeployed: "2 hours ago",
     branch: "main",
     repository: "github.com/johndoe/portfolio-site",

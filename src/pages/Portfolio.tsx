@@ -19,22 +19,17 @@ import {
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
-const userProjects = [
-  { id: "1", name: "portfolio-site", framework: "React", url: "portfolio-site.OneShip.in" },
-  { id: "2", name: "hackathon-project", framework: "Next.js", url: "hackathon.OneShip.app" },
-  { id: "4", name: "blog-platform", framework: "Django", url: "blog.OneShip.app" },
-];
+
 
 export default function Portfolio() {
   const [isEditing, setIsEditing] = useState(false);
   const [portfolioData, setPortfolioData] = useState({
-    name: "Abhishek",
+    name: "Name",
     bio: "Full-stack developer passionate about building web applications. Currently studying Computer Science and participating in hackathons.",
-    email: "abhi1289@gmail.com",
-    github: "abhi1289",
-    linkedin: "Abhishek",
-    twitter: "Abhishek",
-    selectedProjects: ["1", "2", "4"],
+    email: "example@gmail.com",
+    github: "git-hub",
+    linkedin: "linkedin",
+    twitter: "twitter",
   });
   const { toast } = useToast();
 
@@ -215,38 +210,7 @@ export default function Portfolio() {
               <p className="text-sm text-muted-foreground mb-4">
                 Select which projects to display on your portfolio
               </p>
-              <div className="space-y-3">
-                {userProjects.map((project) => {
-                  const isSelected = portfolioData.selectedProjects.includes(project.id);
-                  return (
-                    <button
-                      key={project.id}
-                      onClick={() => {
-                        if (isEditing) {
-                          setPortfolioData({
-                            ...portfolioData,
-                            selectedProjects: isSelected
-                              ? portfolioData.selectedProjects.filter((id) => id !== project.id)
-                              : [...portfolioData.selectedProjects, project.id],
-                          });
-                        }
-                      }}
-                      disabled={!isEditing}
-                      className={`w-full p-4 rounded-lg border text-left transition-all ${
-                        isSelected ? "border-primary bg-primary/5" : "hover:border-primary/50"
-                      }`}
-                    >
-                      <div className="flex items-center justify-between">
-                        <div>
-                          <p className="font-medium">{project.name}</p>
-                          <p className="text-sm text-muted-foreground">{project.framework}</p>
-                        </div>
-                        {isSelected && <CheckCircle className="h-5 w-5 text-primary" />}
-                      </div>
-                    </button>
-                  );
-                })}
-              </div>
+              
             </div>
           </div>
 
@@ -275,20 +239,7 @@ export default function Portfolio() {
                 </div>
               </div>
 
-              {/* Preview Projects */}
-              <div>
-                <h2 className="font-semibold mb-4">Projects</h2>
-                <div className="space-y-3">
-                  {userProjects
-                    .filter((p) => portfolioData.selectedProjects.includes(p.id))
-                    .map((project) => (
-                      <div key={project.id} className="p-4 rounded-lg bg-secondary/50">
-                        <p className="font-medium">{project.name}</p>
-                        <p className="text-xs text-muted-foreground">{project.framework}</p>
-                      </div>
-                    ))}
-                </div>
-              </div>
+            
             </div>
           </div>
         </div>

@@ -79,7 +79,9 @@ export default function DeployNew() {
     // Simulate framework detection
     setTimeout(() => {
       setDetectedFramework("react");
-      setProjectName(repoUrl.split("/").pop() || "my-project");
+      // Extract repository name from GitHub URL
+      const repoName = repoUrl.split("/").pop()?.replace(".git", "") || "my-project";
+      setProjectName(repoName);
       setIsAnalyzing(false);
       setStep(3);
     }, 2000);
@@ -187,7 +189,17 @@ export default function DeployNew() {
                   <Input
                     placeholder="https://github.com/username/repository"
                     value={repoUrl}
-                    onChange={(e) => setRepoUrl(e.target.value)}
+                    onChange={(e) => {
+                      const url = e.target.value;
+                      setRepoUrl(url);
+                      // Auto-extract repository name as user types
+                      if (url) {
+                        const repoName = url.split("/").pop()?.replace(".git", "") || "";
+                        if (repoName) {
+                          setProjectName(repoName);
+                        }
+                      }
+                    }}
                   />
                 </div>
                 <Button
@@ -291,7 +303,7 @@ export default function DeployNew() {
               />
               <p className="text-sm text-muted-foreground flex items-center gap-1">
                 <Globe className="h-3 w-3" />
-                {projectName}.deployeasy.app
+                {projectName}.oneship.app
               </p>
             </div>
 
