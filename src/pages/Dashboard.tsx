@@ -15,37 +15,14 @@ import {
 } from "lucide-react";
 
 const recentProjects = [
-  {
-    id: "1",
-    name: "portfolio-site",
-    framework: "React",
-    status: "live",
-    url: "portfolio-site.deployeasy.app",
-    lastDeployed: "2 hours ago",
-  },
-  {
-    id: "2",
-    name: "hackathon-project",
-    framework: "Next.js",
-    status: "building",
-    url: "hackathon.deployeasy.app",
-    lastDeployed: "Building...",
-  },
-  {
-    id: "3",
-    name: "api-server",
-    framework: "Node.js",
-    status: "failed",
-    url: "api-server.deployeasy.app",
-    lastDeployed: "1 day ago",
-  },
+  
 ];
 
 const stats = [
-  { label: "Total Deployments", value: "24", icon: Rocket, trend: "+12%" },
-  { label: "Active Projects", value: "5", icon: Globe, trend: "+2" },
-  { label: "Security Score", value: "98%", icon: Shield, trend: "+5%" },
-  { label: "Avg Build Time", value: "45s", icon: Zap, trend: "-10s" },
+  { label: "Total Deployments", value: "0", icon: Rocket, trend: "0%" },
+  { label: "Active Projects", value: "0", icon: Globe, trend: "0" },
+  { label: "Security Score", value: "0%", icon: Shield, trend: "0%" },
+  { label: "Avg Build Time", value: "0s", icon: Zap, trend: "0s" },
 ];
 
 const tips = [
@@ -83,7 +60,7 @@ export default function Dashboard() {
         {/* Welcome Section */}
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div>
-            <h1 className="text-3xl font-bold mb-1">Welcome back, John! 👋</h1>
+            <h1 className="text-3xl font-bold mb-1">Welcome back, Abhi! 👋</h1>
             <p className="text-muted-foreground">
               Here's what's happening with your projects today.
             </p>
@@ -175,7 +152,7 @@ export default function Dashboard() {
               <Link to="/deploy">
                 <Button variant="outline" className="w-full">
                   <Plus className="h-4 w-4 mr-2" />
-                  New Project
+                  Add New Project
                 </Button>
               </Link>
             </div>

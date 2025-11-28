@@ -20,25 +20,25 @@ import {
 import { useToast } from "@/hooks/use-toast";
 
 const userProjects = [
-  { id: "1", name: "portfolio-site", framework: "React", url: "portfolio-site.deployeasy.app" },
-  { id: "2", name: "hackathon-project", framework: "Next.js", url: "hackathon.deployeasy.app" },
-  { id: "4", name: "blog-platform", framework: "Django", url: "blog.deployeasy.app" },
+  { id: "1", name: "portfolio-site", framework: "React", url: "portfolio-site.OneShip.in" },
+  { id: "2", name: "hackathon-project", framework: "Next.js", url: "hackathon.OneShip.app" },
+  { id: "4", name: "blog-platform", framework: "Django", url: "blog.OneShip.app" },
 ];
 
 export default function Portfolio() {
   const [isEditing, setIsEditing] = useState(false);
   const [portfolioData, setPortfolioData] = useState({
-    name: "John Doe",
+    name: "Abhishek",
     bio: "Full-stack developer passionate about building web applications. Currently studying Computer Science and participating in hackathons.",
-    email: "john@example.com",
-    github: "johndoe",
-    linkedin: "johndoe",
-    twitter: "johndoe",
+    email: "abhi1289@gmail.com",
+    github: "abhi1289",
+    linkedin: "Abhishek",
+    twitter: "Abhishek",
     selectedProjects: ["1", "2", "4"],
   });
   const { toast } = useToast();
 
-  const portfolioUrl = "johndoe.deployeasy.app";
+  const portfolioUrl = "abhi.OneShip.app";
 
   const copyUrl = () => {
     navigator.clipboard.writeText(`https://${portfolioUrl}`);
