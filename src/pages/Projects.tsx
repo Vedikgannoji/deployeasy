@@ -23,51 +23,6 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 const projects = [
-  {
-    id: "1",
-    name: "portfolio-site",
-    framework: "React",
-    status: "live",
-    url: "portfolio-site.deployeasy.app",
-    lastDeployed: "2 hours ago",
-    deployments: 12,
-  },
-  {
-    id: "2",
-    name: "hackathon-project",
-    framework: "Next.js",
-    status: "building",
-    url: "hackathon.deployeasy.app",
-    lastDeployed: "Building...",
-    deployments: 5,
-  },
-  {
-    id: "3",
-    name: "api-server",
-    framework: "Node.js",
-    status: "failed",
-    url: "api-server.deployeasy.app",
-    lastDeployed: "1 day ago",
-    deployments: 8,
-  },
-  {
-    id: "4",
-    name: "blog-platform",
-    framework: "Django",
-    status: "live",
-    url: "blog.deployeasy.app",
-    lastDeployed: "3 days ago",
-    deployments: 20,
-  },
-  {
-    id: "5",
-    name: "weather-app",
-    framework: "Vue",
-    status: "live",
-    url: "weather.deployeasy.app",
-    lastDeployed: "1 week ago",
-    deployments: 3,
-  },
 ];
 
 export default function Projects() {

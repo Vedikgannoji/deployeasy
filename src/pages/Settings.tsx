@@ -77,9 +77,8 @@ export default function Settings() {
 
               <div className="flex items-center gap-6">
                 <div className="w-20 h-20 rounded-full gradient-hero flex items-center justify-center">
-                  <span className="text-2xl font-bold text-primary-foreground">JD</span>
+                  <span className="text-2xl font-bold text-primary-foreground">AB</span>
                 </div>
-                <Button variant="outline">Change Avatar</Button>
               </div>
 
               <div className="grid md:grid-cols-2 gap-4">
@@ -265,7 +264,7 @@ export default function Settings() {
               <div>
                 <h2 className="text-lg font-semibold mb-1">Billing</h2>
                 <p className="text-sm text-muted-foreground">
-                  Manage your subscription and billing information
+                  Manage your subscription plans and billing information
                 </p>
               </div>
 
@@ -286,15 +285,15 @@ export default function Settings() {
                 <h3 className="font-semibold">Usage This Month</h3>
                 <div className="grid md:grid-cols-3 gap-4">
                   <div className="p-4 rounded-lg bg-secondary/50">
-                    <p className="text-2xl font-bold">3/3</p>
+                    <p className="text-2xl font-bold">0/3</p>
                     <p className="text-sm text-muted-foreground">Projects</p>
                   </div>
                   <div className="p-4 rounded-lg bg-secondary/50">
-                    <p className="text-2xl font-bold">47/100</p>
+                    <p className="text-2xl font-bold">0/100</p>
                     <p className="text-sm text-muted-foreground">Deployments</p>
                   </div>
                   <div className="p-4 rounded-lg bg-secondary/50">
-                    <p className="text-2xl font-bold">1.2GB</p>
+                    <p className="text-2xl font-bold">0GB</p>
                     <p className="text-sm text-muted-foreground">Bandwidth</p>
                   </div>
                 </div>
